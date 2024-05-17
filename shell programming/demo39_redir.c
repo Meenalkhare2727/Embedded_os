@@ -17,7 +17,7 @@ int main(){
 
 				  
 
-				   err = execlp("ls","ls",NULL);
+				   err = execlp("wc","wc",NULL);
 				   if(err < 0){
 
                            perror("exec() failed");
@@ -28,7 +28,7 @@ int main(){
 	}			   
 				   else
 
-				        waitpid(-1,&s,0);
+				        waitpid(ret,&s,0);
 						printf("parent completed!\n");
 						return 0;
  }
